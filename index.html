@@ -32,6 +32,7 @@
         button {
             margin-bottom: 10px;
         }
+
         table {
             border-collapse: collapse;
             border-spacing: 0;
@@ -48,6 +49,16 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
+        @media (max-width: 1024px) {
+            #table {
+                display: none;
+            }
+
+            #map {
+                width: 100%; 
+            }
+        }
     </style>
 </head>
 
@@ -57,7 +68,6 @@
 
             <h2>Earthquake List</h2>
             <button onclick="sortTable()">Sort by Magnitude</button>
-            
 
             <table>
                 <tr>
@@ -76,7 +86,7 @@
             'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
         const map = new mapboxgl.Map({
             container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/satellite-v9', // style URL
+            style: 'mapbox://styles/mapbox/dark-v10', // style URL
             zoom: 5.5, // starting zoom
             center: [138.043, 38] // starting center
         });
